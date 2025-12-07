@@ -15,6 +15,8 @@ public:
     void print(unsigned long val) { ets_printf("%lu", val); }
     void print(long val) { ets_printf("%ld", val); }
     void print(int val) { ets_printf("%d", val); }
+void print(const String &msg) { print(msg.c_str()); }
+
     void print(float val, int precision = 2)
     {
         char buf[32];
@@ -27,6 +29,8 @@ public:
     void println(unsigned long val) { ets_printf("%lu\n", val); }
     void println(long val) { ets_printf("%ld\n", val); }
     void println(int val) { ets_printf("%d\n", val); }
+void println(const String &msg) { println(msg.c_str()); }
+
     void println(float val, int precision = 2)
     {
         char buf[32];
